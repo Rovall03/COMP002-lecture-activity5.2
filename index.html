@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Listener Example</title>
+</head>
+<body>
+    <button>Click me</button>
+    <p>No handler here.</p>
+    <a href="https://www.bandsintown.com/">Tickets!!</a>
+    <script>
+     
+      
+      let button = document.querySelector("button");
+  function once() {
+    console.log("Done.");
+    button.removeEventListener("click", once);
+    alert("click")
+}
+  button.addEventListener("click", once);
+
+  let link = document.querySelector("a");
+  link.addEventListener("click", event => {
+    console.log("NO DISTRACTIONS.");
+    event.preventDefault(); alert("no")
+  });
+    </script>
+      
+    
+</body>
+</html>
